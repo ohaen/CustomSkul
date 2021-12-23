@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>2DFrameWork\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>2DFrameWork\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>2DFrameWork\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEntity.cpp">
+      <Filter>2DFrameWork\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>2DFrameWork\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>2DFrameWork\MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageManager.cpp">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyManager.cpp">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerManager.cpp">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TutorialScene.cpp">
+      <Filter>2DFrameWork\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuScene.cpp">
+      <Filter>2DFrameWork\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>2DFrameWork\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Skul.cpp">
+      <Filter>2DFrameWork\SkulCharactor</Filter>
+    </ClCompile>
+    <ClCompile Include="MapEditerScene.cpp">
+      <Filter>2DFrameWork\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraManager.cpp">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ExternList.cpp">
+      <Filter>2DFrameWork\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>2DFrameWork\MapEditer</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectTile.cpp">
+      <Filter>2DFrameWork\MapEditer</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager.cpp">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordMonster.cpp">
+      <Filter>2DFrameWork\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="ExitDoor.cpp">
+      <Filter>2DFrameWork\Object</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Collider.h">
+      <Filter>2DFrameWork\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.h">
+      <Filter>2DFrameWork\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>2DFrameWork\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEntity.h">
+      <Filter>2DFrameWork\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>2DFrameWork\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>2DFrameWork\MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageManager.h">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyManager.h">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerManager.h">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="TutorialScene.h">
+      <Filter>2DFrameWork\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuScene.h">
+      <Filter>2DFrameWork\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>2DFrameWork\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>2DFrameWork\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFunction.h">
+      <Filter>2DFrameWork\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Skul.h">
+      <Filter>2DFrameWork\SkulCharactor</Filter>
+    </ClInclude>
+    <ClInclude Include="MapEditerScene.h">
+      <Filter>2DFrameWork\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraManager.h">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="IncludeList.h">
+      <Filter>2DFrameWork\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="DefineList.h">
+      <Filter>2DFrameWork\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="ExternList.h">
+      <Filter>2DFrameWork\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>2DFrameWork\MapEditer</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectTile.h">
+      <Filter>2DFrameWork\MapEditer</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager.h">
+      <Filter>2DFrameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SwordMonster.h">
+      <Filter>2DFrameWork\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="ExitDoor.h">
+      <Filter>2DFrameWork\Object</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="2DFrameWork">
+      <UniqueIdentifier>{ae8ae73f-4539-410a-99ae-5f96ab78ff69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일">
+      <UniqueIdentifier>{74885921-6344-4512-a828-eefc33614d17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DFrameWork\Collider">
+      <UniqueIdentifier>{42aab59b-8244-4567-9dc4-86672c6de3a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DFrameWork\GameObject">
+      <UniqueIdentifier>{44f6cac6-f213-4ed1-b487-3a60a3f7e141}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DFrameWork\Image">
+      <UniqueIdentifier>{283bebb6-869c-47ae-8761-8e481dc34758}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DFrameWork\MainGame">
+      <UniqueIdentifier>{ff7bdc75-8a05-4430-a68e-3bec2090829e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DFrameWork\Manager">
+      <UniqueIdentifier>{06eb8b01-3719-4833-bc81-fe5719e34024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DFrameWork\SkulCharactor">
+      <UniqueIdentifier>{c39bffd5-6ba4-4e58-b03c-6df4f696a442}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DFrameWork\Timer">
+      <UniqueIdentifier>{6d939ecc-f627-4640-b4aa-f8c247561ccd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DFrameWork\Utility">
+      <UniqueIdentifier>{25891403-2410-4e03-9ab6-594115d22999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DFrameWork\Scene">
+      <UniqueIdentifier>{1b29840c-5fa1-4f8e-895e-17469f2352ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DFrameWork\MapEditer">
+      <UniqueIdentifier>{cf6d2c63-1d7c-492f-bb9a-a39afc0446f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DFrameWork\Monster">
+      <UniqueIdentifier>{32a0c930-e60f-428a-a20e-f7c4cdac3a27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DFrameWork\Object">
+      <UniqueIdentifier>{957a54b3-f38a-4162-b614-e1aaaa22d0a0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
