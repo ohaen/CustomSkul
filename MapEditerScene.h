@@ -13,7 +13,7 @@ private:
 	Image* tilePalette;
 	Image* objectTileImage;
 
-	//vector<ObjectTile*> objectInfo;
+	int saveNum;
 
 	ObjectTile objectInfo[TILE_MAP_SIZE_X * TILE_MAP_SIZE_Y];
 	Tile tileInfo[TILE_MAP_SIZE_X * TILE_MAP_SIZE_Y];

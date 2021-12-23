@@ -9,7 +9,7 @@ HRESULT MapEditerScene::Init()
 	tilePalette = IMG_MGR->FindImage(eImageTag::TileGrass);
 	objectTileImage = IMG_MGR->FindImage(eImageTag::TileObject);
 	backGround = IMG_MGR->FindImage(eImageTag::BackGround);
-
+	saveNum = 1;
 	TileMapInit(tileInfo);
 	TileMapInit(objectInfo);
 	return S_OK;
@@ -100,17 +100,46 @@ void MapEditerScene::Update()
 
 	if (InputManager::GetButtonDown('Z'))
 	{
-		SaveMap(1);
+		cout << saveNum << "번 맵을 저장합니다 \n";
+		SaveMap(saveNum);
 	}
 
 	if(InputManager::GetButtonDown('X'))
 	{
-		LoadMap(1);
+		cout << saveNum << "번 맵을 불러옵니다 \n";
+		LoadMap(saveNum);
 	}
 
 	if (InputManager::GetButtonDown('C'))
 	{
 		cout << sizeof(tileInfo) << "\n";
+	}
+
+	if (InputManager::GetButtonDown(VK_NUMPAD1))
+	{
+		cout << "스테이지1 맵 선택\n";
+		saveNum = 1;
+	}
+	if (InputManager::GetButtonDown(VK_NUMPAD2))
+	{
+		cout << "스테이지2 맵 선택\n";
+		saveNum = 2;
+	}
+	if (InputManager::GetButtonDown(VK_NUMPAD3))
+	{
+		cout << "스테이지3 맵 선택\n";
+		saveNum = 3;
+	}
+	if (InputManager::GetButtonDown(VK_NUMPAD4))
+	{
+		system("cls");
+		cout << "스테이지4 맵 선택\n";
+		saveNum = 4;
+	}
+	if (InputManager::GetButtonDown(VK_NUMPAD5))
+	{
+		cout << "스테이지5 맵 선택\n";
+		saveNum = 5;
 	}
 }
 

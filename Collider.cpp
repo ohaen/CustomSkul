@@ -33,12 +33,12 @@ void Collider::Render(HDC hdc)
 {
 	Rectangle(hdc, mColliderBody.left, mColliderBody.top, mColliderBody.right, mColliderBody.bottom);
 
-	char mxText[16];
-	wsprintf(mxText, "x : %d", (int)mColliderBody.top);
-	TextOut(hdc, mColliderPos.x - CAM_MGR->GetCamaraPos().x- 20, mColliderPos.y - CAM_MGR->GetCamaraPos().y, mxText, strlen(mxText));
-	char myText[16];
-	wsprintf(myText, "y : %d", (int)mColliderBody.bottom);
-	TextOut(hdc, mColliderPos.x - CAM_MGR->GetCamaraPos().x- 20, mColliderPos.y + 15 - CAM_MGR->GetCamaraPos().y, myText, strlen(myText));
+	//char mxText[16];
+	//wsprintf(mxText, "x : %d", (int)mColliderBody.top);
+	//TextOut(hdc, mColliderPos.x - CAM_MGR->GetCamaraPos().x- 20, mColliderPos.y - CAM_MGR->GetCamaraPos().y, mxText, strlen(mxText));
+	//char myText[16];
+	//wsprintf(myText, "y : %d", (int)mColliderBody.bottom);
+	//TextOut(hdc, mColliderPos.x - CAM_MGR->GetCamaraPos().x- 20, mColliderPos.y + 15 - CAM_MGR->GetCamaraPos().y, myText, strlen(myText));
 	//wsprintf(myText, "y : %d", (int)mColliderBody.top);
 	//TextOut(hdc, mColliderPos.x - CAM_MGR->GetCamaraPos().x - 20, mColliderPos.y - 15 - CAM_MGR->GetCamaraPos().y, myText, strlen(myText));
 }
@@ -51,7 +51,6 @@ bool Collider::MoveTo(POINT addPos)
 	Update();
 	if (mPhysics->CheckCollided(this) == false)
 	{
-		cout << "ºü²ÙÇÔ\n";
 		SetPos(oldPos);
 		return false;
 	}
@@ -59,19 +58,6 @@ bool Collider::MoveTo(POINT addPos)
 	return true;
 }
 
-//bool Collider::CheckCollider(POINT addPos)
-//{
-//	//this->mColliderPos.x += addPos.x;
-//	//this->mColliderPos.y += addPos.y;
-//	if ((mPhysics->IsCollided(this,addPos)))
-//	{
-//		return true;
-//	}
-//	else
-//	{
-//		return false;
-//	}
-//}
 
 bool Collider::CheckCollided()
 {
@@ -88,7 +74,3 @@ void Collider::DeleteCollider()
 	mPhysics->DeleteCollider(this);
 }
 
-//POINT Collider::RayCast(Collider* col, ColliderTag findTag)
-//{
-//	return mPhysics->RayCast(col, findTag);
-//}

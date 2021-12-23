@@ -4,9 +4,10 @@
 #include "Physics.h"
 
 
-#define GRAVITY 20
-#define JUMPFORCE 1200
-#define MOVESPEED 1000
+#define GRAVITY 60
+#define JUMPFORCE 1000
+#define MOVESPEED 600
+#define MAXHP 100
 
 Skul* Skul::Init(Collider* collider, Physics* physics)
 {
@@ -44,8 +45,8 @@ Skul* Skul::Init(Collider* collider, Physics* physics)
 	skulPos.y = WIN_SIZE_Y / 2-65;
 
 	damage = 10;
-	MaxHP = 10;
-	currHP = 10;
+	MaxHP = MAXHP;
+	currHP = MAXHP;
 	return this;
 }
 
@@ -161,6 +162,18 @@ void Skul::Update()
 			dashTime = 0.1f;
 			--dashCount;
 		}
+	}
+
+	if (InputManager::GetButtonDown('A'))
+	{
+		SCENE_MGR->ChangeScene(eSceneTag::TutorialScene);
+	//	for (int i = 0; i < 100; ++i)
+	//	{
+	//		for (int j = 0; j < 100; ++j)
+	//		{
+	//			cout << '1';
+	//		}
+	//	}
 	}
 
 	Collider* hit = skulCollider->FindTagCollider(skulCollider, ColliderTag::MonsterAttack);

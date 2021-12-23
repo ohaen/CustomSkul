@@ -64,10 +64,14 @@ int APIENTRY WinMain(HINSTANCE _hInstance, HINSTANCE _hPrevInstance,
 		}
 		else
 		{
-			g_mainGame.Update();
-			hdc = BeginPaint(g_hWnd, &ps);
-			g_mainGame.Render(hdc);
-			EndPaint(g_hWnd, &ps);
+			if (Timer::CanUpdate())
+			{
+
+				g_mainGame.Update();
+				hdc = BeginPaint(g_hWnd, &ps);
+				g_mainGame.Render(hdc);
+				EndPaint(g_hWnd, &ps);
+			}
 		}
 	}
 

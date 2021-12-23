@@ -27,7 +27,7 @@ void MainMenuScene::Update()
 	if (g_ptMouse.x > 560 && g_ptMouse.x < 720 && g_ptMouse.y > 450 && g_ptMouse.y < 490)
 	{
 		onStart = true;
-		if (KEY_MGR->IsOnceKeyDown(MK_LBUTTON))
+		if (InputManager::GetButtonDown(MK_LBUTTON))
 		{
 			SCENE_MGR->ChangeScene(eSceneTag::TutorialScene);
 		}
@@ -35,7 +35,7 @@ void MainMenuScene::Update()
 	else if (g_ptMouse.x > 560 && g_ptMouse.x < 720 && g_ptMouse.y > 500 && g_ptMouse.y < 545)
 	{
 		onMapEditer = true;
-		if (KEY_MGR->IsOnceKeyDown(MK_LBUTTON))
+		if (InputManager::GetButtonDown(MK_LBUTTON))
 		{
 			//cout << "click" << endl;
 			SCENE_MGR->ChangeScene(eSceneTag::MapEditerScene);

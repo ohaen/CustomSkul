@@ -22,7 +22,6 @@ HRESULT TutorialScene::Init()
 	HPBar = IMG_MGR->FindImage(eImageTag::HPBar);
 	enemyCount = 0;
 	LoadMap(1);
-
 	for (int i = 0; i < TILE_MAP_SIZE_X * TILE_MAP_SIZE_Y; ++i)
 	{
 		if (objectInfo[i].GetTileType() == ObjectTileType::Start)
@@ -97,7 +96,7 @@ void TutorialScene::Update()
 	}
 
 	HPBarPercent = skul->GetCurrHP() / (skul->GetMaxHP() * 0.01);
-	cout << (double)HPBar->GetWidth() - (double)(HPBar->GetWidth() * 0.01)*((double)percent - (double)HPBarPercent) << "\n";
+	//cout << (double)HPBar->GetWidth() - (double)(HPBar->GetWidth() * 0.01)*((double)percent - (double)HPBarPercent) << "\n";
 	//cout << HPBarPercent << "\n";
 	skul->Update();
 	gameManager->PhysicsUpdate();

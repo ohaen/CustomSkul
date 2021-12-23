@@ -184,7 +184,7 @@ void SwordMonster::Animation()
 	{
 		if (frame == 0)
 		{
-			if (elapsd > 1.0)
+			if (elapsd > 0.7)
 			{
 				++frame;
 			}

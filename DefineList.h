@@ -11,13 +11,14 @@
 #define SAFE_RELEASE(p)	{ if (p) { p->Release(); delete p; p = nullptr; } }
 #define SAFE_DELETE(p)	{ if (p) { delete p; p = nullptr; } }
 
-#define TIMER_MGR TimerManager::GetSingleton()
+//#define TIMER_MGR TimerManager::GetSingleton()
 #define KEY_MGR KeyManager::GetSingleton()
 #define SCENE_MGR SceneManager::GetSingleton()
 #define IMG_MGR ImageManager::GetSingleton()
 #define CAM_MGR CameraManager::GetSingleton()
 
-#define DELTA_TIME TIMER_MGR->GetDeltaTime()
+//#define DELTA_TIME TIMER_MGR->GetDeltaTime()
+#define DELTA_TIME Timer::GetDeltaTime()
 #define RANDOM(min, max) (rand() % ((max) - (min) + 1) + (min))
 
 #define TILE_SIZE 76

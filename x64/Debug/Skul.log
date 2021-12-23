@@ -1,27 +1,18 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(BattleCity.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
-  SceneManager.cpp
+  MapEditerScene.cpp
 C:\Users\KGA_18_PM\Desktop\skul\CameraManager.h(13,85): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\KGA_18_PM\Desktop\skul\CameraManager.h(13,117): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\KGA_18_PM\Desktop\skul\CameraManager.h(14,57): warning C4244: '+=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Timer.cpp
-C:\Users\KGA_18_PM\Desktop\skul\CameraManager.h(13,85): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\CameraManager.h(13,117): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\CameraManager.h(14,57): warning C4244: '+=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  TutorialScene.cpp
-C:\Users\KGA_18_PM\Desktop\skul\CameraManager.h(13,85): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\CameraManager.h(13,117): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\CameraManager.h(14,57): warning C4244: '+=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\TutorialScene.cpp(30,101): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\TutorialScene.cpp(30,55): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\TutorialScene.cpp(76,35): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\TutorialScene.cpp(99,35): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\TutorialScene.cpp(122,50): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\TutorialScene.cpp(121,50): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\TutorialScene.cpp(150,68): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\TutorialScene.cpp(150,50): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\TutorialScene.cpp(151,25): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\TutorialScene.cpp(152,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\TutorialScene.cpp(158,59): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KGA_18_PM\Desktop\skul\TutorialScene.cpp(161,59): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  코드를 생성하고 있습니다...
+C:\Users\KGA_18_PM\Desktop\skul\MapEditerScene.cpp(23,80): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\KGA_18_PM\Desktop\skul\MapEditerScene.cpp(23,51): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\KGA_18_PM\Desktop\skul\MapEditerScene.cpp(27,80): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\KGA_18_PM\Desktop\skul\MapEditerScene.cpp(27,51): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\KGA_18_PM\Desktop\skul\MapEditerScene.cpp(31,78): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\KGA_18_PM\Desktop\skul\MapEditerScene.cpp(31,48): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\KGA_18_PM\Desktop\skul\MapEditerScene.cpp(35,78): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\KGA_18_PM\Desktop\skul\MapEditerScene.cpp(35,48): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\KGA_18_PM\Desktop\skul\MapEditerScene.cpp(154,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\KGA_18_PM\Desktop\skul\MapEditerScene.cpp(153,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\KGA_18_PM\Desktop\skul\MapEditerScene.cpp(160,51): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\KGA_18_PM\Desktop\skul\MapEditerScene.cpp(159,51): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Skul.vcxproj -> C:\Users\KGA_18_PM\Desktop\skul\x64\Debug\Skul.exe
