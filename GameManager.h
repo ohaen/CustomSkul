@@ -10,9 +10,9 @@ class Collider;
 class GameManager : public GameEntity
 {
 protected:
-	Physics* physics;
-	MonsterManager* monsterManager;
-	Skul* skul;
+	Physics* physics = nullptr;
+	MonsterManager* monsterManager = nullptr;
+	Skul* skul = nullptr;
 public:
 	HRESULT Init();
 

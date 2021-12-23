@@ -24,6 +24,9 @@
 *.mod
 *.smod
 .vs/Skul/v16/ipch
+.vs/Skul/v16/Browse.VC.db
+x64/
+
 # Compiled Static libraries
 *.lai
 *.la

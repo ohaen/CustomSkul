@@ -56,12 +56,12 @@ void MainMenuScene::Render(HDC hdc)
 	startMenu->Render(hdc, LOGO_X, LOGO_Y+ 110,onStart,0);
 	mapEditerMenu->Render(hdc, LOGO_X, LOGO_Y + 160, onMapEditer, 0);
 
-	char mxText[16];
-	wsprintf(mxText, "Mouse x : %d", g_ptMouse.x);
-	TextOut(hdc, WIN_SIZE_X - 150, 50, mxText, strlen(mxText));
-	char myText[16];
-	wsprintf(myText, "Mouse x : %d", g_ptMouse.y);
-	TextOut(hdc, WIN_SIZE_X - 150, 70, myText, strlen(myText));
+	//char mxText[16];
+	//wsprintf(mxText, "Mouse x : %d", g_ptMouse.x);
+	//TextOut(hdc, WIN_SIZE_X - 150, 50, mxText, strlen(mxText));
+	//char myText[16];
+	//wsprintf(myText, "Mouse x : %d", g_ptMouse.y);
+	//TextOut(hdc, WIN_SIZE_X - 150, 70, myText, strlen(myText));
 
 
 

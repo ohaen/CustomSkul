@@ -56,5 +56,5 @@ void GameManager::DeleteMonster(SwordMonster* monster)
 
 int GameManager::GetEnemyCount()
 {
-	return monsterManager->GetEnemyCount();
+	return (int)monsterManager->GetEnemyCount();
 }

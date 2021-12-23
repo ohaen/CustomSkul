@@ -11,8 +11,6 @@ HRESULT TutorialScene::Init()
 	gameManager->Init();
 	skul = new Skul;
 	CAM_MGR->SetCameraPos(-WIN_SIZE_X / 2, -WIN_SIZE_Y / 2);
-	//backGround = new Image;
-	//backGround->Init("Image/mapImage.bmp", WIN_SIZE_X, WIN_SIZE_Y);
 	backGround = IMG_MGR->FindImage(eImageTag::StageBackGround);
 
 	tileImage = IMG_MGR->FindImage(eImageTag::TileGrass);
@@ -72,7 +70,7 @@ HRESULT TutorialScene::Init()
 		, WIN_SIZE_Y / 2 + CAM_MGR->GetCamaraPos().y }, { 40,40 }, ColliderTag::Player, true));
 
 	percent = 100;
-	HPBarPercent = skul->GetCurrHP() / (skul->GetMaxHP() * 0.01);
+	HPBarPercent = (int)(skul->GetCurrHP() / (skul->GetMaxHP() * 0.01));
 	doorFrame = 0;
 	doorFrameElapsd = 0;
 	
@@ -95,9 +93,7 @@ void TutorialScene::Update()
 		doorFrameElapsd = 0;
 	}
 
-	HPBarPercent = skul->GetCurrHP() / (skul->GetMaxHP() * 0.01);
-	//cout << (double)HPBar->GetWidth() - (double)(HPBar->GetWidth() * 0.01)*((double)percent - (double)HPBarPercent) << "\n";
-	//cout << HPBarPercent << "\n";
+	HPBarPercent = (int)(skul->GetCurrHP() / (skul->GetMaxHP() * 0.01));
 	skul->Update();
 	gameManager->PhysicsUpdate();
 	gameManager->SwordMonsterUpdate();
@@ -117,16 +113,10 @@ void TutorialScene::Render(HDC hdc)
 		if (!(tileInfo[i].GetTileType() == TileType::Null))
 		{
 			tileImage->Render(hdc,
-				tileInfo[i].GetTilePos().x + TILE_SIZE * 0.5 - CAM_MGR->GetCamaraPos().x,
-				tileInfo[i].GetTilePos().y + TILE_SIZE * 0.5 - CAM_MGR->GetCamaraPos().y,
+				(int)(tileInfo[i].GetTilePos().x + TILE_SIZE * 0.5 - CAM_MGR->GetCamaraPos().x),
+				(int)(tileInfo[i].GetTilePos().y + TILE_SIZE * 0.5 - CAM_MGR->GetCamaraPos().y),
 				tileInfo[i].GetTileRenderPos().x,
 				tileInfo[i].GetTileRenderPos().y);
-
-			//objectTileImage->Render(hdc,
-			//	objectInfo[i].GetTilePos().x + TILE_SIZE * 0.5 - CAM_MGR->GetCamaraPos().x,
-			//	objectInfo[i].GetTilePos().y + TILE_SIZE * 0.5 - CAM_MGR->GetCamaraPos().y,
-			//	objectInfo[i].GetTileRenderPos().x,
-			//	objectInfo[i].GetTileRenderPos().y);
 
 		}
 	}
@@ -146,23 +136,18 @@ void TutorialScene::Render(HDC hdc)
 	gameManager->SwordMonsterRender(hdc);
 	skul->Render(hdc);
 
-	playerUI->Render(hdc, playerUI->GetFrameWidth() * 0.5, WIN_SIZE_Y - playerUI->GetFrameHeight() *1.5, 0, 0, 2.0f);
-	HPBar->Render(hdc, (84)+ HPBarPercent *0.6, WIN_SIZE_Y - 39, 0, 0, 2.0f);
-	HPBar->SetFrameWidth((double)HPBar->GetWidth() - (double)(HPBar->GetWidth() * 0.01) * ((double)percent - (double)HPBarPercent));
-	//HPBar->GetFrameWidth() - ((HPBar->GetFrameWidth() * 0.01) * (100 - HPBarPercent))
+	playerUI->Render(hdc, (int)(playerUI->GetFrameWidth() * 0.5), (int)(WIN_SIZE_Y - playerUI->GetFrameHeight() *1.5), 0, 0, 2.0f);
+	HPBar->Render(hdc, (int)((84)+ HPBarPercent *0.6), (int)(WIN_SIZE_Y - 39), 0, 0, 2.0f);
+	HPBar->SetFrameWidth((int)((double)HPBar->GetWidth() - (double)(HPBar->GetWidth() * 0.01) * ((double)percent - (double)HPBarPercent)));
 
-
-	char mxText[16];
-	wsprintf(mxText, "x : %d", (int)CAM_MGR->GetCamaraPos().x);
-	TextOut(hdc, WIN_SIZE_X - 150, 50, mxText, strlen(mxText));
-	char myText[16];
-	wsprintf(myText, "y : %d", (int)CAM_MGR->GetCamaraPos().y);
-	TextOut(hdc, WIN_SIZE_X - 150, 70, myText, strlen(myText));
 }
 
 void TutorialScene::Release()
 {	
 	skul->Release();
+	gameManager->Release();
+	delete skul;
+	delete gameManager;
 }
 
 

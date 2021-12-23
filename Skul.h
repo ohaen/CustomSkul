@@ -20,45 +20,45 @@ public:
 		Dash,
 	};
 private:
-	Image* mainSkul;
-	Image* mainSkulWalk;
-	Image* littleBone;
+	Image* mainSkul = nullptr;
+	Image* mainSkulWalk = nullptr;
+	Image* littleBone = nullptr;
 
-	skulType firstSkulType;
-	Collider* skulCollider;
-	Collider* hitBox;
-	Physics* myPhysics;
+	skulType firstSkulType = skulType::Nomal;
+	Collider* skulCollider = nullptr;
+	Collider* hitBox = nullptr;
+	Physics* myPhysics = nullptr;
 
-	eStatus action;
-	bool jump;
-	bool doJump;
-	bool doDown;
-	bool doubleJump;
-	bool delay;
-	bool comboAttack;
-	bool hitReady;
-	bool invinvibility;
-	bool doRender;
+	eStatus action = eStatus::Idle;
+	bool jump = 0;
+	bool doJump = 0;
+	bool doDown = 0;
+	bool doubleJump = 0;
+	bool delay = 0;
+	bool comboAttack = 0;
+	bool hitReady = 0;
+	bool invinvibility = 0;
+	bool doRender = 0;
 
-	int skulFrame;
-	float elapsd;
-	float moveSpeed;
-	float jumpForce;
-	float downForce;
-	float hitElapsd;
-	float dashElapsd;
-	float dashTime;
+	int skulFrame = 0;
+	float elapsd = 0.0f;
+	float moveSpeed = 0.0f;
+	float jumpForce = 0.0f;
+	float downForce = 0.0f;
+	float hitElapsd = 0.0f;
+	float dashElapsd = 0.0f;
+	float dashTime = 0.0f;
 
-	float invinvibilityCount;
-	float invinvibilityElapsd;
+	float invinvibilityCount = 0.0f;
+	float invinvibilityElapsd = 0.0f;
 	
-	int skulDir;
+	int skulDir = 0;
 	POINT skulPos;
-	int dashCount;
+	int dashCount = 0;
 
-	int damage;
-	int MaxHP;
-	int currHP;
+	int damage = 0;
+	int MaxHP = 0;
+	int currHP = 0;
 public:
 	virtual ~Skul() {};
 	Skul* Init(Collider* collider, Physics* physics);

@@ -1,6 +1,0 @@
-C:\Users\ohqwe\Desktop\projectHistory\개인프로젝트\v2\BattleCity\x64\Debug\Skul.exe
-C:\Users\ohqwe\Desktop\projectHistory\skul\skul\x64\Debug\Skul.exe
-C:\Users\KGA_16_PM\Desktop\skul\x64\Debug\Skul.exe
-C:\Users\ohqwe\Desktop\projectHistory\skul\x64\Debug\Skul.exe
-C:\Users\KGA_13_PM\Desktop\skul (1)\x64\Debug\Skul.exe
-C:\Users\KGA_18_PM\Desktop\skul\x64\Debug\Skul.exe

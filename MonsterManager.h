@@ -12,7 +12,7 @@ public:
 	void CreateMonster(POINT pos, Collider* collider, Collider* raycast, Physics* physics);
 	void DeleteMonster(SwordMonster* monster);
 
-	inline int GetEnemyCount() { return vecSword.size(); }
+	inline size_t GetEnemyCount() { return vecSword.size(); }
 	void Render(HDC hdc);
 	void Update();
 	void Release();

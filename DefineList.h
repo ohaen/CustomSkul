@@ -20,7 +20,7 @@
 //#define DELTA_TIME TIMER_MGR->GetDeltaTime()
 #define DELTA_TIME Timer::GetDeltaTime()
 #define RANDOM(min, max) (rand() % ((max) - (min) + 1) + (min))
-
+#define A 12
 #define TILE_SIZE 76
 #define TILE_MAP_SIZE_X 60
 #define TILE_MAP_SIZE_Y 30

@@ -10,7 +10,7 @@ public:
 	~CameraManager() {};
 	HRESULT Init();
 	inline POINT GetCamaraPos() { return CameraPos; }
-	inline void SetCameraPos(float cameraPosX, float camaraPosY) { this->CameraPos.x = cameraPosX; this->CameraPos.y = camaraPosY; }
-	inline void AddCameraPos(float addPosX, float addPosY) { this->CameraPos.x += addPosX; this->CameraPos.y += addPosY; }
+	inline void SetCameraPos(int cameraPosX, int camaraPosY) { this->CameraPos.x = cameraPosX; this->CameraPos.y = camaraPosY; }
+	inline void AddCameraPos(int addPosX, int addPosY) { this->CameraPos.x += addPosX; this->CameraPos.y += addPosY; }
 };
 

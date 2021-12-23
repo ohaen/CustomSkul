@@ -110,7 +110,7 @@ void Skul::Update()
 	//	this->jumpForce = JUMPFORCE;
 	//	doubleJump = false;
 	//}
-	if (InputManager::GetButton(VK_RIGHT))
+	if (InputManager::GetButton(VK_RIGHT) && ((action != eStatus::Attatk && action != eStatus::ComboAttack)||jump))
 	{
 		if (!(GetDelay()))
 		{
@@ -120,7 +120,7 @@ void Skul::Update()
 		SetSkulDir(1);
 		Walk();
 	}
-	else if (InputManager::GetButton(VK_LEFT))
+	else if (InputManager::GetButton(VK_LEFT) && ((action != eStatus::Attatk && action != eStatus::ComboAttack)||jump))
 	{
 		if (!(GetDelay()))
 		{
@@ -359,7 +359,7 @@ void Skul::Animation()
 				}
 				if (skulFrame == 2)
 				{
-					myPhysics->DeleteCollider(hitBox);
+					hitBox = myPhysics->DeleteCollider(hitBox);
 				}
 			}
 			else
@@ -421,16 +421,19 @@ void Skul::Down()
 		}
 		else
 		{
+
 			this->jump = false;
 			this->doJump = false;
 			this->doDown = true;
 			this->downForce = 0;
+
 		}
 	}
 }
 
 void Skul::Attack()
 {
+
 	action = eStatus::Attatk;
 	skulFrame = 0;
 	delay = true;
@@ -438,7 +441,10 @@ void Skul::Attack()
 
 void Skul::ComboAttack()
 {
-	comboAttack = true;
+	if (!jump)
+	{
+		comboAttack = true;
+	}
 }
 
 void Skul::TakeDamage(int damage)
@@ -459,7 +465,7 @@ void Skul::TakeDamage(int damage)
 void Skul::Invinvibility(int second)
 {
 	invinvibility = true;
-	invinvibilityCount = second;
+	invinvibilityCount = (float)second;
 }
 
 void Skul::Dash()
