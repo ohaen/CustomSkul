@@ -3,6 +3,7 @@
 #include "Image.h"
 #include "Physics.h"
 #include "GameManager.h"
+#include "PlayerStatus.h"
 
 HRESULT TutorialScene::Init()
 {
@@ -12,14 +13,14 @@ HRESULT TutorialScene::Init()
 	skul = new Skul;
 	CAM_MGR->SetCameraPos(-WIN_SIZE_X / 2, -WIN_SIZE_Y / 2);
 	backGround = IMG_MGR->FindImage(eImageTag::StageBackGround);
+	playerStatus = new PlayerStatus;
+	playerStatus->Init();
+	openDoor = false;
 
 	tileImage = IMG_MGR->FindImage(eImageTag::TileGrass);
 	objectTileImage = IMG_MGR->FindImage(eImageTag::TileObject);
 	exitDoor = IMG_MGR->FindImage(eImageTag::Exit);
-	playerUI = IMG_MGR->FindImage(eImageTag::PlayerInfo);
-	HPBar = IMG_MGR->FindImage(eImageTag::HPBar);
-	enemyCount = 0;
-	LoadMap(1);
+	LoadMap(SCENE_MGR->GetStageInfo());
 	for (int i = 0; i < TILE_MAP_SIZE_X * TILE_MAP_SIZE_Y; ++i)
 	{
 		if (objectInfo[i].GetTileType() == ObjectTileType::Start)
@@ -57,13 +58,11 @@ HRESULT TutorialScene::Init()
 			pos.y = tileInfo[i].GetTilePos().y + TILE_SIZE / 2;
 			gameManager->CreateSwordMonster(pos, gameManager->CreateCollider(pos, { 65 ,76 }, ColliderTag::Monster, true)
 			, gameManager->CreateCollider(pos, { 600 ,50 }, ColliderTag::RayCast, true));
-			++enemyCount;
 		}
 		if (objectInfo[i].GetTileType() == ObjectTileType::Exit)
 		{
 			exitDoorPos.x = tileInfo[i].GetTilePos().x + TILE_SIZE / 2;
 			exitDoorPos.y = tileInfo[i].GetTilePos().y + TILE_SIZE / 2 - 75;
-			gameManager->CreateCollider(exitDoorPos, { 225 ,225 }, ColliderTag::Exit, true);
 		}
 	}
 	skul = gameManager->SpawnSkul(gameManager->CreateCollider({ WIN_SIZE_X / 2 + CAM_MGR->GetCamaraPos().x + 15
@@ -93,16 +92,23 @@ void TutorialScene::Update()
 		doorFrameElapsd = 0;
 	}
 
+	if (gameManager->GetEnemyCount() <= 0 && !openDoor)
+	{
+		openDoor = true;
+		gameManager->CreateCollider(exitDoorPos, { 225 ,225 }, ColliderTag::Exit, true);
+	}
 	HPBarPercent = (int)(skul->GetCurrHP() / (skul->GetMaxHP() * 0.01));
-	skul->Update();
 	gameManager->PhysicsUpdate();
 	gameManager->SwordMonsterUpdate();
+	playerStatus->SetHp(skul->GetMaxHP(), skul->GetCurrHP());
+	skul->Update();
 
 	if (InputManager::GetButtonDown(VK_TAB))
 	{
 		debug ? debug = 0 : debug = 1;
 	}
 	
+
 }
 
 void TutorialScene::Render(HDC hdc)
@@ -136,18 +142,13 @@ void TutorialScene::Render(HDC hdc)
 	gameManager->SwordMonsterRender(hdc);
 	skul->Render(hdc);
 
-	playerUI->Render(hdc, (int)(playerUI->GetFrameWidth() * 0.5), (int)(WIN_SIZE_Y - playerUI->GetFrameHeight() *1.5), 0, 0, 2.0f);
-	HPBar->Render(hdc, (int)((84)+ HPBarPercent *0.6), (int)(WIN_SIZE_Y - 39), 0, 0, 2.0f);
-	HPBar->SetFrameWidth((int)((double)HPBar->GetWidth() - (double)(HPBar->GetWidth() * 0.01) * ((double)percent - (double)HPBarPercent)));
-
+	playerStatus->Render(hdc);
 }
 
 void TutorialScene::Release()
 {	
-	skul->Release();
-	gameManager->Release();
-	delete skul;
-	delete gameManager;
+	SAFE_RELEASE(skul);
+	SAFE_RELEASE(gameManager);
 }
 
 

@@ -6,7 +6,6 @@
 
 HRESULT MainGame::Init()
 {
-	KEY_MGR->Init();
 	InputManager::Init(g_hWnd);
 	IMG_MGR->Init();
 	Timer::Init();
@@ -25,7 +24,7 @@ HRESULT MainGame::Init()
 	backBuffer = new Image();
 	backBuffer->Init("Image/mapImage.bmp", WIN_SIZE_X, WIN_SIZE_Y);
 
-	SCENE_MGR->Init();
+	//SCENE_MGR->Init();
 
 	SCENE_MGR->ChangeScene(eSceneTag::MainMenuScene);
 
@@ -39,7 +38,6 @@ void MainGame::Update()
 	SCENE_MGR->Update();
 
 	InputManager::Update();
-	KEY_MGR->Update();
 
 
 	InvalidateRect(g_hWnd, NULL, false);
@@ -68,8 +66,6 @@ void MainGame::Release()
 	IMG_MGR->Release();
 	IMG_MGR->ReleaseSingleton();
 
-	KEY_MGR->Release();
-	KEY_MGR->ReleaseSingleton();
 
 	SCENE_MGR->Release();
 	SCENE_MGR->ReleaseSingleton();

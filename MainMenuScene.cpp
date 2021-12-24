@@ -17,7 +17,7 @@ HRESULT MainMenuScene::Init()
 
 	onStart = false;
 	onMapEditer = false;
-
+	
 
 	return S_OK;
 }
@@ -29,6 +29,7 @@ void MainMenuScene::Update()
 		onStart = true;
 		if (InputManager::GetButtonDown(MK_LBUTTON))
 		{
+			
 			SCENE_MGR->ChangeScene(eSceneTag::TutorialScene);
 		}
 	}
@@ -46,7 +47,10 @@ void MainMenuScene::Update()
 		onMapEditer = false;
 		onStart = false;
 	}
-
+	if (1 != SCENE_MGR->GetStageInfo())
+	{
+		SCENE_MGR->ChangeScene(eSceneTag::TutorialScene);
+	}
 }
 
 void MainMenuScene::Render(HDC hdc)
@@ -55,14 +59,6 @@ void MainMenuScene::Render(HDC hdc)
 	logo->Render(hdc,LOGO_X, LOGO_Y);
 	startMenu->Render(hdc, LOGO_X, LOGO_Y+ 110,onStart,0);
 	mapEditerMenu->Render(hdc, LOGO_X, LOGO_Y + 160, onMapEditer, 0);
-
-	//char mxText[16];
-	//wsprintf(mxText, "Mouse x : %d", g_ptMouse.x);
-	//TextOut(hdc, WIN_SIZE_X - 150, 50, mxText, strlen(mxText));
-	//char myText[16];
-	//wsprintf(myText, "Mouse x : %d", g_ptMouse.y);
-	//TextOut(hdc, WIN_SIZE_X - 150, 70, myText, strlen(myText));
-
 
 
 

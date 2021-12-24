@@ -5,6 +5,7 @@
 #include "MainMenuScene.h"
 #include "TutorialScene.h"
 #include "MapEditerScene.h"
+#include "StageReadyScene.h"
 
 GameEntity* SceneManager::currScene = nullptr;
 GameEntity* SceneManager::readyScene = nullptr;
@@ -28,6 +29,7 @@ void SceneManager::Init()
 	AddScene(eSceneTag::MainMenuScene, new MainMenuScene);
 	AddScene(eSceneTag::TutorialScene, new TutorialScene);
 	AddScene(eSceneTag::MapEditerScene, new MapEditerScene);
+	AddScene(eSceneTag::StageReadyScene, new StageReadyScene);
 }
 
 void SceneManager::Release()

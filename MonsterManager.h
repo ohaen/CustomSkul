@@ -9,6 +9,7 @@ class MonsterManager : public GameEntity
 private:
 	vector<SwordMonster*> vecSword;
 public:
+	virtual ~MonsterManager() {};
 	void CreateMonster(POINT pos, Collider* collider, Collider* raycast, Physics* physics);
 	void DeleteMonster(SwordMonster* monster);
 

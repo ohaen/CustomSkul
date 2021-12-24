@@ -42,6 +42,7 @@ private:
 	bool attackReady;
 	bool hitReady;
 public:
+	virtual ~SwordMonster() {};
 	HRESULT Init(POINT pos, Collider* collider, Collider* ray, Physics* physics);
 
 	void Update();

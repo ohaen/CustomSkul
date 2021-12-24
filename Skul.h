@@ -53,7 +53,7 @@ private:
 	float invinvibilityElapsd = 0.0f;
 	
 	int skulDir = 0;
-	POINT skulPos;
+	POINT skulPos = {};
 	int dashCount = 0;
 
 	int damage = 0;

@@ -7,11 +7,13 @@ class Physics;
 class Skul;
 class Image;
 class GameManager;
+class PlayerStatus;
 class TutorialScene : public GameEntity
 {
 private:
 	GameManager* gameManager;
 
+	PlayerStatus* playerStatus;
 	Skul* skul;
 	Image* backGround;
 
@@ -19,15 +21,13 @@ private:
 	Image* tileImage;
 	Image* objectTileImage;
 
-	Image* playerUI;
-	Image* HPBar;
 
 	bool debug;
+	bool openDoor;
 	int percent;
 	int HPBarPercent;
 	int HPBarWidth;
 	int doorFrame;
-	int enemyCount;
 	float doorFrameElapsd;
 
 	POINT exitDoorPos;

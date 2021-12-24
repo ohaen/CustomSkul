@@ -81,3 +81,15 @@ void Physics::Update()
 		mVecCollider[i]->Update();
 	}
 }
+
+void Physics::Release()
+{
+	//for (auto it = mVecCollider.begin(); it != mVecCollider.end();)
+	//{
+	//	auto temp = it;
+	//	++it;
+	//	mVecCollider.erase(temp);
+
+	//}
+	
+}

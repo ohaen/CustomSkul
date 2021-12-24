@@ -35,6 +35,7 @@ void ImageManager::Init()
 	//PlyaerUI
 	AddImage(eImageTag::PlayerInfo, "Image/UI/PlayerFrame.bmp", 168, 66, 1, 1, true, RGB(255, 0, 255));
 	AddImage(eImageTag::HPBar, "Image/UI/HpBar.bmp", 118, 10, 1, 1, true, RGB(255, 0, 255));
+	AddImage(eImageTag::SkulFace, "Image/charactor/LittleBone1.bmp", 45, 45, 1, 1, true, RGB(255, 0, 255));
 }
 
 void ImageManager::Release()

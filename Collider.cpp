@@ -43,6 +43,10 @@ void Collider::Render(HDC hdc)
 	//TextOut(hdc, mColliderPos.x - CAM_MGR->GetCamaraPos().x - 20, mColliderPos.y - 15 - CAM_MGR->GetCamaraPos().y, myText, strlen(myText));
 }
 
+void Collider::Release()
+{
+}
+
 bool Collider::MoveTo(POINT addPos)
 {
 	POINT oldPos = mColliderPos;

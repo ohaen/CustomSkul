@@ -11,6 +11,7 @@ private:
 	vector<Collider*> mVecCollider;
 
 public:
+	virtual ~Physics() {};
 	Collider* CreateCollider(POINT pos, POINT bodySize, ColliderTag colliderTag, bool overlap, int damage);
 	Collider* DeleteCollider(Collider* col);
 	int CheckCollided(Collider* col1);
@@ -21,5 +22,5 @@ public:
 
 	void Render(HDC hdc);
 	void Update();
-
+	void Release();
 };

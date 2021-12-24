@@ -13,6 +13,12 @@ HRESULT GameManager::Init()
 	return S_OK;
 }
 
+void GameManager::Release()
+{
+	SAFE_RELEASE(physics);
+	SAFE_RELEASE(monsterManager);
+}
+
 Skul* GameManager::SpawnSkul(Collider* collider)
 {
 	skul->Init(collider, this->physics);

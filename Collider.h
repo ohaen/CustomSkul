@@ -13,10 +13,12 @@ private:
 	bool overlap = false;
 	int damage;
 public:
+	virtual ~Collider() {};
 	HRESULT Init(POINT pos, POINT bodySize, ColliderTag tag, Physics* physics, bool overlap, int damage);
 	void Update() override;
 
 	void Render(HDC hdc) override;
+	void Release();
 
 	bool MoveTo(POINT addPos);
 	void SetPos(POINT setPos) 

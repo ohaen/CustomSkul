@@ -36,6 +36,7 @@ enum class eImageTag
 	//PlayerUI
 	PlayerInfo,
 	HPBar,
+	SkulFace,
 };
 
 class Image;
@@ -45,6 +46,7 @@ private:
 	std::map<eImageTag, Image*>	mapImages;
 
 public:
+	virtual ~ImageManager() {}
 	void Init();
 	void Release();
 

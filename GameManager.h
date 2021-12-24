@@ -14,9 +14,9 @@ protected:
 	MonsterManager* monsterManager = nullptr;
 	Skul* skul = nullptr;
 public:
+	virtual ~GameManager() {};
 	HRESULT Init();
-
-	//inline Physics* GetPhysics() { return this->physics; };
+	void Release();
 
 	Skul* SpawnSkul(Collider* collider);
 	void CreateSwordMonster(POINT pos, Collider* collider, Collider* raycast);

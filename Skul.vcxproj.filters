@@ -25,13 +25,7 @@
     <ClCompile Include="ImageManager.cpp">
       <Filter>2DFrameWork\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="KeyManager.cpp">
-      <Filter>2DFrameWork\Manager</Filter>
-    </ClCompile>
     <ClCompile Include="SceneManager.cpp">
-      <Filter>2DFrameWork\Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="TimerManager.cpp">
       <Filter>2DFrameWork\Manager</Filter>
     </ClCompile>
     <ClCompile Include="TutorialScene.cpp">
@@ -73,9 +67,13 @@
     <ClCompile Include="SwordMonster.cpp">
       <Filter>2DFrameWork\Monster</Filter>
     </ClCompile>
-    <ClCompile Include="ExitDoor.cpp">
+    <ClCompile Include="StageReadyScene.cpp">
+      <Filter>2DFrameWork\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerStatus.cpp">
       <Filter>2DFrameWork\Object</Filter>
     </ClCompile>
+    <ClCompile Include="KeyManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Collider.h">
@@ -99,16 +97,10 @@
     <ClInclude Include="ImageManager.h">
       <Filter>2DFrameWork\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="KeyManager.h">
-      <Filter>2DFrameWork\Manager</Filter>
-    </ClInclude>
     <ClInclude Include="SceneManager.h">
       <Filter>2DFrameWork\Manager</Filter>
     </ClInclude>
     <ClInclude Include="Singleton.h">
-      <Filter>2DFrameWork\Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="TimerManager.h">
       <Filter>2DFrameWork\Manager</Filter>
     </ClInclude>
     <ClInclude Include="TutorialScene.h">
@@ -162,9 +154,13 @@
     <ClInclude Include="SwordMonster.h">
       <Filter>2DFrameWork\Monster</Filter>
     </ClInclude>
-    <ClInclude Include="ExitDoor.h">
+    <ClInclude Include="StageReadyScene.h">
+      <Filter>2DFrameWork\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerStatus.h">
       <Filter>2DFrameWork\Object</Filter>
     </ClInclude>
+    <ClInclude Include="KeyManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="2DFrameWork">

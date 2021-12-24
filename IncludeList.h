@@ -6,6 +6,7 @@
 #include <map>
 #include <iostream>
 #include <string>
+#include <bitset>
 
 //#include "TimerManager.h"
 #include "ImageManager.h"

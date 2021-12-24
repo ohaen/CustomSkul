@@ -182,7 +182,13 @@ void Skul::Update()
 		TakeDamage(hit->GetDamage());
 		cout << "히트다히트\n";
 	}
-
+	Collider* exit = skulCollider->FindTagCollider(skulCollider, ColliderTag::Exit);
+	if (exit != nullptr && InputManager::GetButtonDown('F'))
+	{
+		SCENE_MGR->SetStageInfo(SCENE_MGR->GetStageInfo() + 1);
+		//SCENE_MGR->ChangeScene(eSceneTag::TutorialScene);
+		SCENE_MGR->ChangeScene(eSceneTag::MainMenuScene);
+	}
 
 	Animation();
 
@@ -251,6 +257,9 @@ void Skul::Render(HDC hdc)
 
 void Skul::Release()
 {
+	SAFE_RELEASE(skulCollider);
+	SAFE_RELEASE(hitBox);
+	myPhysics = nullptr;
 }
 
 void Skul::Animation()

@@ -181,4 +181,34 @@ void Image::Render(HDC hdc, int destX, int destY, int frameX, int frameY, float 
 	}
 }
 
+void Image::RenderDir(HDC hdc, int destX, int destY, int frameX, int frameY, float scale, int dir)
+{
+	if (isTransparent)
+	{
+		GdiTransparentBlt(
+			hdc,
+			destX,
+			destY,
+			imageInfo->frameWidth * scale,
+			imageInfo->frameHeight * scale,	// 전체 프레임 수
 
+			imageInfo->hMemDc,
+			imageInfo->frameWidth * frameX,
+			imageInfo->frameHeight * frameY,
+			imageInfo->frameWidth, imageInfo->frameHeight,
+			transColor
+		);
+	}
+	else
+	{
+		BitBlt(hdc,
+			destX,
+			destY,
+			imageInfo->frameWidth,
+			imageInfo->frameHeight,
+			imageInfo->hMemDc,
+			imageInfo->frameWidth * frameX,
+			imageInfo->frameHeight * frameY,
+			SRCCOPY);
+	}
+}

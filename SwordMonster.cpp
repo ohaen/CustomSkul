@@ -234,6 +234,7 @@ void SwordMonster::Animation()
 		{
 			if (frame < 1)
 			{
+
 				if (dir == 0)
 				{
 					Move({ 15,0 });

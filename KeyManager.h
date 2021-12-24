@@ -18,7 +18,7 @@ public:
 	void Update();
 
 	bool IsOnceKeyDown(int key);
-	bool IsOnceKeyUp(int key);	
+	bool IsOnceKeyUp(int key);
 	bool IsStayKeyDown(int key);
 };
 

@@ -52,6 +52,7 @@ private:
 	COLORREF transColor;
 
 public:
+	~Image() {};
 	HRESULT Init(int width, int height);
 	HRESULT Init(const char* fileName, int width, int height,
 		bool isTrans = false, COLORREF transColor = NULL);
@@ -64,6 +65,7 @@ public:
 	void Render(HDC hdc);
 	void Render(HDC hdc, int destX, int destY);
 	void Render(HDC hdc, int destX, int destY, int frameX, int frameY, float scale = 1.0f);
+	void RenderDir(HDC hdc, int destX, int destY, int frameX, int frameY, float scale = 1.0f, int dir = 0);
 
 	HDC GetMemDC() { if (imageInfo) return imageInfo->hMemDc; return NULL; }
 
