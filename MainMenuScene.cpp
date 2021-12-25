@@ -29,8 +29,8 @@ void MainMenuScene::Update()
 		onStart = true;
 		if (InputManager::GetButtonDown(MK_LBUTTON))
 		{
-			
-			SCENE_MGR->ChangeScene(eSceneTag::TutorialScene);
+			SCENE_MGR->ChangeScene(eSceneTag::StageReadyScene);
+			//SCENE_MGR->ChangeScene(eSceneTag::TutorialScene);
 		}
 	}
 	else if (g_ptMouse.x > 560 && g_ptMouse.x < 720 && g_ptMouse.y > 500 && g_ptMouse.y < 545)

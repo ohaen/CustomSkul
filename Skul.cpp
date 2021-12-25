@@ -164,18 +164,6 @@ void Skul::Update()
 		}
 	}
 
-	if (InputManager::GetButtonDown('A'))
-	{
-		SCENE_MGR->ChangeScene(eSceneTag::TutorialScene);
-	//	for (int i = 0; i < 100; ++i)
-	//	{
-	//		for (int j = 0; j < 100; ++j)
-	//		{
-	//			cout << '1';
-	//		}
-	//	}
-	}
-
 	Collider* hit = skulCollider->FindTagCollider(skulCollider, ColliderTag::MonsterAttack);
 	if (hit != nullptr && hitReady)
 	{
@@ -187,7 +175,8 @@ void Skul::Update()
 	{
 		SCENE_MGR->SetStageInfo(SCENE_MGR->GetStageInfo() + 1);
 		//SCENE_MGR->ChangeScene(eSceneTag::TutorialScene);
-		SCENE_MGR->ChangeScene(eSceneTag::MainMenuScene);
+		SCENE_MGR->ChangeScene(eSceneTag::StageReadyScene);
+		//SCENE_MGR->ChangeScene(eSceneTag::MainMenuScene);
 	}
 
 	Animation();
