@@ -70,7 +70,11 @@ bool Collider::CheckCollided()
 
 Collider* Collider::FindTagCollider(Collider* col, ColliderTag findTag)
 {
-	return mPhysics->FindTagCollider(col, findTag);
+	if (mPhysics != nullptr)
+	{
+		return mPhysics->FindTagCollider(col, findTag);
+	}
+	return nullptr;
 }
 
 void Collider::DeleteCollider()

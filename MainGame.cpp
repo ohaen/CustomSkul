@@ -70,6 +70,8 @@ void MainGame::Release()
 	SCENE_MGR->Release();
 	SCENE_MGR->ReleaseSingleton();
 
+	CAM_MGR->ReleaseSingleton();
+
 	KillTimer(g_hWnd, 0);
 }
 

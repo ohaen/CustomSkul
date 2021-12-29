@@ -34,6 +34,12 @@ void SceneManager::Init()
 
 void SceneManager::Release()
 {
+	for (auto& elem : mapScenes)
+	{
+		SAFE_RELEASE(elem.second);
+	}
+
+	mapScenes.clear();
 }
 
 void SceneManager::Update()

@@ -12,6 +12,7 @@ void MonsterManager::CreateMonster(POINT pos, Collider* collider, Collider* rayc
 void MonsterManager::DeleteMonster(SwordMonster* monster)
 {
 	auto it = find(vecSword.begin(), vecSword.end(), monster);
+	SAFE_DELETE(*it);
 	vecSword.erase(it);
 }
 
@@ -36,10 +37,16 @@ void MonsterManager::Update()
 	{
 		vecSword[i]->Update();
 	}
-
-
 }
 
 void MonsterManager::Release()
 {
+	SwordMonster* monster;
+	for (auto it = vecSword.begin(); it != vecSword.end();)
+	{
+		monster = (*it);
+		it = vecSword.erase(it);
+		SAFE_DELETE(monster);
+	}
+	vecSword.clear();
 }

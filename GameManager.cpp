@@ -17,6 +17,7 @@ void GameManager::Release()
 {
 	SAFE_RELEASE(physics);
 	SAFE_RELEASE(monsterManager);
+	SAFE_RELEASE(skul);
 }
 
 Skul* GameManager::SpawnSkul(Collider* collider)

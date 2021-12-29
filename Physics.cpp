@@ -12,6 +12,7 @@ Collider* Physics::CreateCollider(POINT pos, POINT bodySize, ColliderTag collide
 Collider* Physics::DeleteCollider(Collider* col)
 {
 	auto it = find(mVecCollider.begin(), mVecCollider.end(), col);
+	SAFE_DELETE(*it);
 	mVecCollider.erase(it);
 	return nullptr;
 }
@@ -84,12 +85,12 @@ void Physics::Update()
 
 void Physics::Release()
 {
-	//for (auto it = mVecCollider.begin(); it != mVecCollider.end();)
-	//{
-	//	auto temp = it;
-	//	++it;
-	//	mVecCollider.erase(temp);
-
-	//}
-	
+	Collider* col;
+	for (auto it = mVecCollider.begin(); it != mVecCollider.end();)
+	{
+		col = (*it);
+		it = mVecCollider.erase(it);
+		SAFE_DELETE(col);
+	}
+	mVecCollider.clear();
 }

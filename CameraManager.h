@@ -7,7 +7,7 @@ class CameraManager : public Singleton<CameraManager>
 private:
 	POINT CameraPos = { 0,0 };
 public:
-	~CameraManager() {};
+	~CameraManager() = default;
 	HRESULT Init();
 	inline POINT GetCamaraPos() { return CameraPos; }
 	inline void SetCameraPos(int cameraPosX, int camaraPosY) { this->CameraPos.x = cameraPosX; this->CameraPos.y = camaraPosY; }

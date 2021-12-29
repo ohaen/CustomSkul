@@ -7,7 +7,7 @@
 #define GRAVITY 60
 #define JUMPFORCE 1000
 #define MOVESPEED 600
-#define MAXHP 100
+#define MAXHP 20
 
 Skul* Skul::Init(Collider* collider, Physics* physics)
 {
@@ -44,7 +44,7 @@ Skul* Skul::Init(Collider* collider, Physics* physics)
 	skulPos.x = WIN_SIZE_X / 2-53;		//Temp pos
 	skulPos.y = WIN_SIZE_Y / 2-65;
 
-	damage = 10;
+	damage = 40;
 	MaxHP = MAXHP;
 	currHP = MAXHP;
 	return this;
@@ -164,12 +164,7 @@ void Skul::Update()
 		}
 	}
 
-	Collider* hit = skulCollider->FindTagCollider(skulCollider, ColliderTag::MonsterAttack);
-	if (hit != nullptr && hitReady)
-	{
-		TakeDamage(hit->GetDamage());
-		cout << "히트다히트\n";
-	}
+
 	Collider* exit = skulCollider->FindTagCollider(skulCollider, ColliderTag::Exit);
 	if (exit != nullptr && InputManager::GetButtonDown('F'))
 	{
@@ -177,11 +172,16 @@ void Skul::Update()
 		//SCENE_MGR->ChangeScene(eSceneTag::TutorialScene);
 		SCENE_MGR->ChangeScene(eSceneTag::StageReadyScene);
 		//SCENE_MGR->ChangeScene(eSceneTag::MainMenuScene);
+		return;
+	}
+	Collider* hit = skulCollider->FindTagCollider(skulCollider, ColliderTag::MonsterAttack);
+	if (hit != nullptr && hitReady)
+	{
+		TakeDamage(hit->GetDamage());
+		cout << "히트다히트\n";
 	}
 
 	Animation();
-
-
 
 }
 
@@ -246,9 +246,9 @@ void Skul::Render(HDC hdc)
 
 void Skul::Release()
 {
-	SAFE_RELEASE(skulCollider);
-	SAFE_RELEASE(hitBox);
-	myPhysics = nullptr;
+	//SAFE_RELEASE(skulCollider);
+	//SAFE_RELEASE(hitBox);
+	//myPhysics = nullptr;
 }
 
 void Skul::Animation()

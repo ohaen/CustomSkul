@@ -10,7 +10,7 @@ HRESULT TutorialScene::Init()
 	debug = 0;
 	gameManager = new GameManager;
 	gameManager->Init();
-	skul = new Skul;
+	//skul = new Skul;
 	CAM_MGR->SetCameraPos(-WIN_SIZE_X / 2, -WIN_SIZE_Y / 2);
 	backGround = IMG_MGR->FindImage(eImageTag::StageBackGround);
 	playerStatus = new PlayerStatus;
@@ -147,8 +147,8 @@ void TutorialScene::Render(HDC hdc)
 
 void TutorialScene::Release()
 {	
-	SAFE_RELEASE(skul);
 	SAFE_RELEASE(gameManager);
+	delete playerStatus;
 }
 
 
