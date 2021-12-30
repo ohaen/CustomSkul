@@ -105,7 +105,7 @@ void TutorialScene::Update()
 
 	if (InputManager::GetButtonDown(VK_TAB))
 	{
-		debug ? debug = 0 : debug = 1;
+		debug = !debug;
 	}
 	
 
